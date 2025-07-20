@@ -1,31 +1,27 @@
 import React from "react"
+import Count from "./Count"
 
 export default function Main() {
 
     const [ingridient, setIngredient] = React.useState([])
 
-    function handleSubmit(event) {
-        event.preventDefault()
-        const formData = new FormData(event.currentTarget)
+    function handleSubmit(formData) {
         const input = formData.get("input")
         setIngredient(prev => [...prev, input])
-        event.currentTarget.reset();
     }
 
-    const going = true
+    const foods = ingridient.map((f, i) => <li key={i}>{f}</li>)
 
-    let answer === "y" ? "s"
+    const [recipeShown, setRecipeShown] = React.useState(false)
 
-    if (going === true) {
-        answer = "y"
-    } else {
-        answer = "n"
+    function getRecipe() {
+        setRecipeShown(prev => !prev)
     }
 
     return (
         <main>
-            <p>{answer}</p>
-            <form onSubmit={handleSubmit} className="form">
+            <Count prop="2"/>
+            <form action={handleSubmit} className="form">
                 <input
                     type="text"
                     placeholder="e.g. oregano"
@@ -37,10 +33,27 @@ export default function Main() {
             {
                 ingridient.length > 0 &&
                 <div className="food">
-                    <h4>Ingredients on hand</h4>
+                    <h2>Ingredients on hand:</h2>
                     <ul>
-                        {ingridient.map(f => <li>{f}</li>)}
+                        {foods}
                     </ul>
+                </div>
+            }
+            {
+                ingridient.length > 3 &&
+
+                <div className="bottom-box">
+                    <div className="info">
+                        <h3>Ready for recipe?</h3>
+                        <p>Generate a recipe from your list of ingredients.</p>
+                    </div>
+                    <button onClick={getRecipe}>Get a recipe</button>
+                </div>
+            }
+            {
+                recipeShown &&
+                <div className="recipe">
+                    <p>placehodler redecipe</p>
                 </div>
             }
         </main>

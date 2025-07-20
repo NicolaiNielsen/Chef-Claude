@@ -22,6 +22,9 @@ header img {
 
 main {
   padding: 30px 30px 10px;
+  max-width: 812px;
+  justify-content: center;
+  margin: 0 auto; 
 }
 
 .form {
@@ -58,14 +61,58 @@ main {
 }
 
 .food {
-  display: flex;
-  flex-direction: column;     /* Stack vertically */
-  align-items: center;        /* Center horizontally */
-  justify-content: center;    /* Center vertically */
-  min-height: 60vh;           /* Take up most of the viewport height */
+  min-width: 150px;
+  max-width: 400px;
+  flex-wrap: wrap; 
 }
+
+.food h2 {
+  padding-left: 0px;
+}
+
+
 ul {
   padding: 0;
-  margin: 0;
-  text-align: center;         /* Center text inside list */
+  margin-left: 15px; 
+  text-align: left;     
 }
+
+.bottom-box {
+  background-color: antiquewhite;
+  padding: 20px;
+  margin: 0;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* Remove gap if you want the button flush right */
+  gap: 0;  /* or just remove the gap line */
+  flex-wrap: wrap; /* just in case */
+}
+
+.bottom-box h3 {
+  margin: 0;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.bottom-box button {
+  padding: 10px 22px;
+  border: none;
+  background: #ada55d;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  margin: 0;
+  height: 50px;
+}
+
+
+
+
+

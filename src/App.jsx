@@ -1,11 +1,13 @@
 import Header from "./components/Header"
 import Main from "./components/Main"
+import Training from "./components/Training"
 function App() {
 
   return (
     <>
     <Header/>
     <Main/>
+    
     </>
   )
 }
