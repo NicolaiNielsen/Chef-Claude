@@ -1,0 +1,71 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+  display: flex;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 0.7rem;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #e0e0e0; /* your existing border */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08)
+}
+
+header img {
+  width: 60px;
+  height: auto;
+  flex-shrink: 0;
+  display: block;
+}
+
+main {
+  padding: 30px 30px 10px;
+}
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.form > input,
+.form > button {
+  border-radius: 6px;
+  min-width: 150px;
+  max-width: 400px;
+  flex: 1 1 0;
+  height: 58px; /* same height for both */
+  box-sizing: border-box;
+}
+
+.form > input {
+  border: 1px solid #D1D5DB;
+  padding: 9px 13px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.form > button {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border: none;
+  background-color: black;
+  color: white;
+  font-size: 0.875rem;
+  font-weight: 500;
+  /* Removed width and min-width */
+}
+
+.food {
+  display: flex;
+  flex-direction: column;     /* Stack vertically */
+  align-items: center;        /* Center horizontally */
+  justify-content: center;    /* Center vertically */
+  min-height: 60vh;           /* Take up most of the viewport height */
+}
+ul {
+  padding: 0;
+  margin: 0;
+  text-align: center;         /* Center text inside list */
+}
